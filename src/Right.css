@@ -1,0 +1,37 @@
+button.record {
+  width: 120px;
+  height: 40px;
+  vertical-align: baseline;
+  margin: 0 auto;
+  font-size: inherit;
+  margin: 1vh 0;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+button.record:hover {
+  filter: invert(0.7);
+  cursor: pointer;
+}
+
+.recordings > li {
+  margin-top: 1vh;
+  border: 0.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  text-align: left;
+  padding-left: 1vw;
+  font-size: 1.3rem;
+}
+
+.recordings > li:hover {
+  filter: invert(0.3);
+  cursor: pointer;
+}
+
+.dot {
+  width: 12px !important;
+  height: 12px;
+  border-radius: 100px;
+  margin-right: 1rem;
+  background-color: #171717;
+}

@@ -1,68 +1,114 @@
-body {
-  background: rgba(0,0,0,0.5);
-}
+@import url('https://rsms.me/inter/inter-ui.css');
 
 .App {
   font-family: 'Inter UI', sans-serif;
-  font-size: 10rem;
   padding: 0;
   max-width: 100%;
   margin: 0;
   box-shadow: none;
-  color: white;
+  font-weight: 400;
+  overflow-x: hidden;
+  background: #000;
 }
+
 
 header {
-  font-size: 15rem;
-  color: #fff;
+  font-size: 18rem;
   text-align: center;
-  display: block;
-  position: absolute;
-  width: 100vw;
-  top: 5vh;
-  z-index: 101;
+  height: 30vh;
+  margin: 10vh 0;
+  color: #fff;
 }
 
-section {
+section.details {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: row wrap;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  height: calc(100vh - 30vh - 10vh);
+  color: #fff;
+}
+
+section.details > * {
+  flex: 1 100%;
+  text-align: left;
+  padding: 0 2vw;
+}
+
+section.details > .column {
+  /* border: 1px solid white; */
+}
+
+.column.column-3 {
+  background: #fff;
+  color: #000;
+}
+.column.column-3 > p {
+  font-weight: 600;
+  text-decoration: underline;
+}
+.column.column-3 > .prompt {
+  margin: 2vh 0;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 5.5rem;
+}
+
+@media all and (min-width: 600px) {
+  .column { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .column-1 { order: 1; }
+  .column-2 { order: 2; }
+  .column-3 { order: 3; }
+}
+
+section.choices {
   position: relative;
   text-align: center;
   display: flex;
   flex-direction: row;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  background: #fff;
 }
 
 .left {
-  height: 100vh;
-  padding-top: 25vh;
+  height: 70vh;
+  padding-top: 30vh;
   left: 0;
-  border-right: 1px solid #fff;
+  /* border-right: 2px solid #000; */
   width: 50%;
   margin: auto;
+  color: #000;
 }
 
 .right {
-  height: 100vh;
-  padding-top: 25vh;
-  border-left: 1px solid #fff;
+  height: 70vh;
+  padding-top: 30vh;
+  /* border-left: 2px solid #000; */
   width: 50%;
   margin: auto;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
 }
 
 .left-focused {
   z-index: 100;
-  padding-top: 25vh;
-  border: none;
-  background: rgba(0,0,0,0.2);
+  padding-top: 30vh;
   transition: width 0.5s;
-  width: calc(75% - 6px);
+  width: calc(100% - 6px);
   color: #000;
 }
 
 .right-focused {
   z-index: 100;
-  padding-top: 25vh;
-  border: none;
-  background: rgba(0,0,0,0.2);
+  padding-top: 30vh;
   transition: width 0.5s;
-  width: calc(75% - 6px);
-  color: #000;
+  width: calc(100% - 6px);
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
 }

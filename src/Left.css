@@ -1,7 +1,15 @@
 
+.offline {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+
+p.text {
+  max-width: 80%;
+}
 
 .places > li {
+  border-radius: 20px;
   text-align: left;
-  padding-left: 4vw;
-  /* font-size: 1.3rem; */
 }

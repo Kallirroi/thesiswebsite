@@ -1,12 +1,12 @@
 button.record {
-  width: 120px;
-  height: 40px;
+  width: auto;
+  height: auto;
   vertical-align: baseline;
-  margin: 0 auto;
   font-size: inherit;
-  margin: 1vh 0;
-  padding: 4px;
+  margin: 2vh 0;
+  padding: 5px 12px;
   border-radius: 20px;
+  margin: 0 auto;
 }
 
 button.record:hover {
@@ -14,18 +14,24 @@ button.record:hover {
   cursor: pointer;
 }
 
+.recordings {
+  max-width: 80%;
+  margin-top: 2vh;
+  display: none;
+}
+
 .recordings > li {
   margin-top: 1vh;
-  border: 0.5px solid rgba(255, 255, 255, 0.4);
   border-radius: 20px;
   text-align: left;
   padding-left: 1vw;
-  font-size: 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .recordings > li:hover {
   filter: invert(0.3);
   cursor: pointer;
+  color: #000;
 }
 
 .dot {

@@ -4,6 +4,7 @@
   font-family: 'Inter UI', sans-serif;
   padding: 0;
   max-width: 100%;
+  max-height: 200%;
   margin: 0;
   box-shadow: none;
   font-weight: 400;
@@ -13,9 +14,9 @@
 
 
 header {
-  font-size: 18rem;
+  font-size: 10rem;
   text-align: center;
-  height: 30vh;
+  height: 20%;
   margin: 10vh 0;
   color: #fff;
 }
@@ -26,19 +27,22 @@ section.details {
   display: flex;
   flex-direction: row wrap;
   font-size: 2rem;
-  line-height: 2.6rem;
-  height: calc(100vh - 30vh - 10vh);
+  line-height: 2.5rem;
+  height: calc(100% - 20% - 20vh);
   color: #fff;
+  overflow-y: scroll;
+  margin: 0 auto;
 }
 
 section.details > * {
   flex: 1 100%;
   text-align: left;
-  padding: 0 2vw;
+  overflow-y: scroll;
 }
 
 section.details > .column {
   /* border: 1px solid white; */
+  padding: 0 1vw 0 1vw;
 }
 
 .column.column-3 {
@@ -66,34 +70,40 @@ section.details > .column {
   .column-3 { order: 3; }
 }
 
+
+
+
+
+
 section.choices {
   position: relative;
   /* text-align: center; */
   display: flex;
   flex-direction: row;
   font-size: 2rem;
-  line-height: 2.7rem;
+  line-height: 2.5rem;
   background: #fff;
   padding-left: 2vw;
+  overflow-y: hidden;
 }
 
 .left {
-  height: 70vh;
+  height: 100vh;
   padding-left: 2vw;
   padding-top: 30vh;
   /* border-right: 2px solid #000; */
-  width: 50%;
+  width: 50vw;
   margin: auto;
   padding-left: 2vw;
   color: #000;
 }
 
 .right {
-  height: 70vh;
+  height: 100vh;
   padding-top: 30vh;
   padding-left: 2vw;
     /* border-left: 2px solid #000; */
-  width: 50%;
+  width: 50vw;
   margin: auto;
   background-color: rgba(0,0,0,0.4);
   color: #fff;
@@ -104,8 +114,9 @@ section.choices {
   padding-top: 30vh;
   padding-left: 2vw;
   transition: width 0.5s;
-  width: calc(100% - 6px);
+  width: calc(100vw - 6px);
   color: #000;
+  height: 100vh;
 }
 
 .right-focused {
@@ -113,7 +124,8 @@ section.choices {
   padding-left: 2vw;
   padding-top: 30vh;
   transition: width 0.5s;
-  width: calc(100% - 6px);
+  width: calc(100vw - 6px);
   background-color: rgba(0,0,0,0.4);
   color: #fff;
+  height: 100vh;
 }

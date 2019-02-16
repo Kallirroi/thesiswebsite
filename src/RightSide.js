@@ -7,10 +7,10 @@ class RightSide extends React.Component {
 render() {
 	return (
 	  	<div className={this.props.className}>
-				<div className="offline">PARTICIPATE ONLINE</div>
-				<p className="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. </p>
+				<div className="offline">TWEET THE INSTITUTE</div>
+				<p className="text">At each location, you can choose to either use the decentralized network, or one of the "Twitter objects". These objects are entry point to Twitter. They record audio messages, transcribe them and share them on Twitter. </p>
 
-				<button className="record"> Tweet your response </button>
+				<button className="tweet"> See what these objects have been tweeting. </button>
 
 				<div className="recordings"> {/* I have set this to display: none */}
 				Those who have participated online said:

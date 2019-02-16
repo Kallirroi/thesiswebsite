@@ -1,16 +1,19 @@
-button.record {
+button.tweet {
   width: auto;
   height: auto;
   vertical-align: baseline;
   font-size: inherit;
   margin: 2vh 0;
-  padding: 5px 12px;
+  padding: 1rem;
   border-radius: 20px;
   margin: 0 auto;
+  color: #1DA4EF;
+  border: 2px solid #1DA4EF;
 }
 
-button.record:hover {
-  filter: invert(0.7);
+button.tweet:hover {
+  background-color: #1DA4EF;
+  color: #fff;
   cursor: pointer;
 }
 

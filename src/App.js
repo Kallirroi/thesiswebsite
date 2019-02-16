@@ -11,18 +11,32 @@ class App extends Component {
     this.state = {
       classNameLeft: 'left',
       classNameRight: 'right',
+      classNameApp: 'App',
     };
     this.focus = this.focus.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener('mouseover', this.focus);
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
   }
+
 
   componentWillUnmount() {
     window.removeEventListener('mouseover', this.focus);
   }
 
+  resize() {
+    let showFallback = (window.innerWidth <= 760);
+    if (showFallback) {
+        this.setState({classNameApp: 'App-Fallback'});
+    }
+    else {
+      this.setState({classNameApp: 'App'});
+
+    }
+  }
   focus(e) {
     if (e.target.className === 'left') {
       this.setState({
@@ -39,23 +53,23 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.classNameApp)
     return (
-      <div className="App">
-        <header className="header" > LOCAL OBJECTS </header>
-        <section className="details">
-          <div className="column column-1"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. </div>
-          <div className="column column-2"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.  </div>
-          <div className="column column-3">
-            <p>QUESTION OF THE DAY</p>
-            <div className="prompt"> If you could wake up tomorrow having gained any one quality or ability, what would it be? </div>
-          </div>
-        </section>
+      <div>
+        <div className={this.state.classNameApp}>
+          <header className="header" > LOCAL OBJECTS </header>
+          <section className="details">
+            <div className="column column-1"> How does the nature of a network shape the discourse its users have? How does what one says differ if they know that it will remain within a local network versus being shared on Twitter? The Viral Communications group at the Media Lab is interested in exploring these questions by deploying networks of physical objects in designated locations around the campus. These objects either form a small-scale, hyperlocal and decentralized (p2p) network, or they are entry points to Twitter. </div>
+            <div className="column column-2"> In both cases, the function and purpose of each network and overall project will be clearly stated via text on a label next to the object (that text is detailed in the supplemental material), as well as the project-specific website. No identifiers linked to subjects will be collected, other than their voice recorded in the message. Thus, the identity of the human subjects won’t be able to readily be ascertained. The messages collected will be transcribed and then analyzed using Natural Language Processing methods. The transcripts of the audio messages will not be made public, but the insights derived from them will be discussed as part of the researcher’s Master’s thesis.</div>
+          </section>
 
-        <section className="choices">
-          <LeftSide onMouseEnter={this.focus} className={this.state.classNameLeft}/>
-          <RightSide onMouseEnter={this.focus} className={this.state.classNameRight} />
-        </section>
+          <section className="choices">
+            <LeftSide onMouseEnter={this.focus} className={this.state.classNameLeft}/>
+            <RightSide onMouseEnter={this.focus} className={this.state.classNameRight} />
+          </section>
+        </div>
       </div>
+
     );
   }
 }

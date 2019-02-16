@@ -1,22 +1,22 @@
 @import url('https://rsms.me/inter/inter-ui.css');
 
+
 .App {
   font-family: 'Inter UI', sans-serif;
   padding: 0;
   max-width: 100%;
-  max-height: 200%;
   margin: 0;
   box-shadow: none;
   font-weight: 400;
   overflow-x: hidden;
   background: #000;
+  box-sizing: border-box;
 }
 
-
 header {
-  font-size: 10rem;
+  font-size: 8vw;
   text-align: center;
-  height: 20%;
+  height: 20vh;
   margin: 10vh 0;
   color: #fff;
 }
@@ -28,10 +28,11 @@ section.details {
   flex-direction: row wrap;
   font-size: 2rem;
   line-height: 2.5rem;
-  height: calc(100% - 20% - 20vh);
+  height: auto;
   color: #fff;
   overflow-y: scroll;
   margin: 0 auto;
+  padding-bottom: 5vh;
 }
 
 section.details > * {
@@ -42,23 +43,24 @@ section.details > * {
 
 section.details > .column {
   /* border: 1px solid white; */
-  padding: 0 1vw 0 1vw;
+  padding: 0 5vw;
 }
 
-.column.column-3 {
-  background: #fff;
-  color: #000;
+
+@media all and (max-width: 600px) {
+
+  .column {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  section.choices > .left, section.choices > .right {
+    width: 100vw;
+    margin: 0 auto;
+  }
 }
-.column.column-3 > p {
-  font-weight: 600;
-  text-decoration: underline;
-}
-.column.column-3 > .prompt {
-  margin: 2vh 0;
-  font-weight: 600;
-  font-size: 5rem;
-  line-height: 6rem;
-}
+
 
 @media all and (min-width: 600px) {
   .column { flex: 1 0 0; }
@@ -67,13 +69,10 @@ section.details > .column {
 @media all and (min-width: 800px) {
   .column-1 { order: 1; }
   .column-2 { order: 2; }
-  .column-3 { order: 3; }
 }
 
 
-
-
-
+/* ====================================================================== */
 
 section.choices {
   position: relative;
@@ -84,48 +83,87 @@ section.choices {
   line-height: 2.5rem;
   background: #fff;
   padding-left: 2vw;
-  overflow-y: hidden;
 }
 
 .left {
-  height: 100vh;
+  height: auto;
   padding-left: 2vw;
-  padding-top: 30vh;
-  /* border-right: 2px solid #000; */
+  padding-top: 8vh;
+  padding-bottom: 2vh;
+  border-right: 2px solid #000;
   width: 50vw;
   margin: auto;
-  padding-left: 2vw;
   color: #000;
+  overflow-y: scroll;
 }
 
 .right {
-  height: 100vh;
-  padding-top: 30vh;
+  height: auto;
   padding-left: 2vw;
+  padding-top: 8vh;
+  padding-bottom: 2vh;
     /* border-left: 2px solid #000; */
   width: 50vw;
   margin: auto;
-  background-color: rgba(0,0,0,0.4);
-  color: #fff;
+  color: #1DA4EF;
+  overflow-y: scroll;
 }
 
 .left-focused {
   z-index: 100;
-  padding-top: 30vh;
+  height: auto;
   padding-left: 2vw;
+  padding-top: 8vh;
+  padding-bottom: 2vh;
   transition: width 0.5s;
   width: calc(100vw - 6px);
   color: #000;
-  height: 100vh;
+  /* height: 100vh; */
+  overflow-y: scroll;
+  border-right: 2px solid #000;
 }
 
 .right-focused {
   z-index: 100;
+  height: autos;
   padding-left: 2vw;
-  padding-top: 30vh;
+  padding-top: 8vh;
+  padding-bottom: 2vh;
   transition: width 0.5s;
   width: calc(100vw - 6px);
-  background-color: rgba(0,0,0,0.4);
-  color: #fff;
-  height: 100vh;
+  color: #1DA4EF;
+  /* height: 100vh; */
+  overflow-y: scroll;
+}
+
+
+
+
+/* ====================================================================== */
+
+.App-Fallback {
+  font-family: 'Inter UI', sans-serif;
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+  box-shadow: none;
+  font-weight: 400;
+  overflow-x: hidden;
+  background: #000;
+  box-sizing: border-box;
+}
+
+.App-Fallback > header {
+
+  color: gold;
+
+}
+
+.App-Fallback > section.details > * {
+  color: green;
+}
+
+
+.App-Fallback > section.choices > * {
+  color: yellow;
 }

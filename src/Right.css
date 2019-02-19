@@ -1,46 +1,20 @@
+
 button.tweet {
-  width: auto;
-  height: auto;
+  width: 20vw;
   vertical-align: baseline;
   font-size: inherit;
-  margin: 2vh 0;
+  position: relative;
+  display: block;
+  margin: 0 auto;
   padding: 1rem;
   border-radius: 20px;
-  margin: 0 auto;
   color: #1DA4EF;
   border: 2px solid #1DA4EF;
+  background: #fff;
 }
 
 button.tweet:hover {
   background-color: #1DA4EF;
   color: #fff;
   cursor: pointer;
-}
-
-.recordings {
-  max-width: 80%;
-  margin-top: 2vh;
-  display: none;
-}
-
-.recordings > li {
-  margin-top: 1vh;
-  border-radius: 20px;
-  text-align: left;
-  padding-left: 1vw;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.recordings > li:hover {
-  filter: invert(0.3);
-  cursor: pointer;
-  color: #000;
-}
-
-.dot {
-  width: 12px !important;
-  height: 12px;
-  border-radius: 100px;
-  margin-right: 1rem;
-  background-color: #171717;
 }

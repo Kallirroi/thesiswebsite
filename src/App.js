@@ -53,7 +53,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.classNameApp)
     return (
       <div>
         <div className={this.state.classNameApp}>
@@ -64,8 +63,10 @@ class App extends Component {
           </section>
 
           <section className="choices">
-            <LeftSide onMouseEnter={this.focus} className={this.state.classNameLeft}/>
-            <RightSide onMouseEnter={this.focus} className={this.state.classNameRight} />
+            {/*<LeftSide onMouseEnter={this.focus} className={this.state.classNameLeft}/>
+            <RightSide onMouseEnter={this.focus} className={this.state.classNameRight} /> */}
+            <LeftSide className="left"/>
+            <RightSide className="right"/> 
           </section>
         </div>
       </div>

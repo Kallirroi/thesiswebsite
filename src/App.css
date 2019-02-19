@@ -82,61 +82,33 @@ section.choices {
   font-size: 2rem;
   line-height: 2.5rem;
   background: #fff;
-  padding-left: 2vw;
+  margin: 0 auto;
 }
 
-.left {
-  height: auto;
-  padding-left: 2vw;
-  padding-top: 8vh;
-  padding-bottom: 2vh;
-  border-right: 2px solid #000;
+.left, .right {
+  height: 100vh;
+  padding: 8vh 0 2vh 5vw;
   width: 50vw;
-  margin: auto;
   color: #000;
   overflow-y: scroll;
 }
 
 .right {
-  height: auto;
-  padding-left: 2vw;
-  padding-top: 8vh;
-  padding-bottom: 2vh;
-    /* border-left: 2px solid #000; */
-  width: 50vw;
-  margin: auto;
   color: #1DA4EF;
-  overflow-y: scroll;
 }
 
-.left-focused {
-  z-index: 100;
-  height: auto;
-  padding-left: 2vw;
-  padding-top: 8vh;
-  padding-bottom: 2vh;
-  transition: width 0.5s;
-  width: calc(100vw - 6px);
+
+.left:hover {
+
+}
+
+.right:focused {
+
+}
+
+a {
   color: #000;
-  /* height: 100vh; */
-  overflow-y: scroll;
-  border-right: 2px solid #000;
 }
-
-.right-focused {
-  z-index: 100;
-  height: autos;
-  padding-left: 2vw;
-  padding-top: 8vh;
-  padding-bottom: 2vh;
-  transition: width 0.5s;
-  width: calc(100vw - 6px);
-  color: #1DA4EF;
-  /* height: 100vh; */
-  overflow-y: scroll;
-}
-
-
 
 
 /* ====================================================================== */
@@ -154,16 +126,64 @@ section.choices {
 }
 
 .App-Fallback > header {
-
-  color: gold;
-
+  font-size: 20vw;
+  /* text-align: left; */
 }
+
+.App-Fallback > section.details {
+  position: relative;
+  text-align: center;
+  display: flex;
+  /* flex-direction: row wrap; */
+  flex-flow: column wrap;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  height: auto;
+  color: #fff;
+  overflow-y: scroll;
+  margin: 0 auto;
+  padding-bottom: 5vh;
+}
+
 
 .App-Fallback > section.details > * {
-  color: green;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  margin: 2vh 2vw;
+  width: 88vw;
 }
 
+.App-Fallback > section.details > .column.column-1 {
+  order: 1;
+}
+.App-Fallback > section.details > .column.column-2 {
+  order: 2;
+}
 
-.App-Fallback > section.choices > * {
-  color: yellow;
+.App-Fallback > section.choices {
+  position: relative;
+  /* text-align: center; */
+  display: flex;
+  flex-flow: column wrap;
+  /* flex-direction: row; */
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.App-Fallback > section.choices  > * > img {
+  display: none;
+}
+
+.App-Fallback > section.choices  > * {
+  width: 88vw;
+  margin-bottom: 0;
+  height: auto;
+  max-width: 100%;
+}
+
+.App-Fallback > section.choices  > * > button.tweet {
+  width: 60vw;
+  background: #fff;
 }

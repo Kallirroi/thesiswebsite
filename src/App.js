@@ -58,15 +58,19 @@ class App extends Component {
         <div className={this.state.classNameApp}>
           <header className="header" > LOCAL OBJECTS </header>
           <section className="details">
-            <div className="column column-1"> How does the nature of a network shape the discourse its users have? How does what one says differ if they know that it will remain within a local network versus being shared on Twitter? The Viral Communications group at the Media Lab is interested in exploring these questions by deploying networks of physical objects in designated locations around the campus. These objects either form a small-scale, hyperlocal and decentralized (p2p) network, or they are entry points to Twitter. </div>
-            <div className="column column-2"> In both cases, the function and purpose of each network and overall project will be clearly stated via text on a label next to the object (that text is detailed in the supplemental material), as well as the project-specific website. No identifiers linked to subjects will be collected, other than their voice recorded in the message. Thus, the identity of the human subjects won’t be able to readily be ascertained. The messages collected will be transcribed and then analyzed using Natural Language Processing methods. The transcripts of the audio messages will not be made public, but the insights derived from them will be discussed as part of the researcher’s Master’s thesis.</div>
+            <div className="column column-1">
+            <p>How does the nature of a network shape the discourse its users have? How does what one says differ if they know that it will remain within a local network versus being shared on Twitter?</p>
+            <p>The Viral Communications group at the Media Lab is interested in exploring these questions by deploying networks of physical objects in designated locations around the campus. These objects either form a small-scale, hyperlocal p2p network (case 1 below), or they are entry points to Twitter (case 2 below). </p> </div>
+            <div className="column column-2">
+              <img alt="image" src="1.png" width="80%" />
+            </div>
           </section>
 
           <section className="choices">
             {/*<LeftSide onMouseEnter={this.focus} className={this.state.classNameLeft}/>
             <RightSide onMouseEnter={this.focus} className={this.state.classNameRight} /> */}
+            <RightSide className="right"/>
             <LeftSide className="left"/>
-            <RightSide className="right"/> 
           </section>
         </div>
       </div>

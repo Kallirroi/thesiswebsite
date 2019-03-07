@@ -6,18 +6,19 @@ class LefSide extends React.Component {
 render() {
 	return (
 	  	<div className={this.props.className}>
-				<div className="offline">LISTEN TO THE INSTITUTE</div>
-        <p className="text">You can find the nodes of the decentralized network in the locations listed below. Each object records and plays back audio messages. It also receives and sends data to and from the rest of the hyper-local network’s nodes. </p>
+        <div className="text">
+				<p><span className="underline">FAQ</span></p>
+				<p>• Are the decentralized network devices secure?</p>
+				<p>The objects are connected with each other in a cryptographically secure and decentralized way (using a p2p protocol called <a href="https://datproject.org/" target="_blank">Dat</a>). The micro-controllers that power them are also secure - so there is no danger of your message escaping the confines of this hyperlocal network. The recording functionality starts and ends with the button press.</p>
 
-				<img alt="gif" src="https://d2w9rnfcy7mm78.cloudfront.net/3417799/original_641454559eb3cc39f9a450158735f2fa.png?1547595327" />
 
-				<div className="places">
-					<li> Media Lab (<a href="https://whereis.mit.edu/?go=E14">link</a>)</li>
-					<li> Student Center (<a href="https://whereis.mit.edu/?go=W20">link</a>)</li>
-					<li> Muddy Charles Pub (<a href="https://whereis.mit.edu/?go=50">link</a>)</li>
-					<li> Dorm (<a href="">link</a>)</li>
-					<li> Dorm (<a href="">link</a>)</li>
+				<p>• Who can listen to your message?</p>
+
+				<p>Anyone who has physical access to the objects. The researcher conducting the study will also listen to, as well as transcribe, the messages that have been recorded during the course of the study. The transcripts will not become public, but the insights derived from them (e.g. length of message, emotional valence) will be published as part of the researcher’s Master’s thesis.</p>
+
 				</div>
+
+				<p>For more information, contact <span className="underline">kalli at mit.edu</span> </p>
 	  	</div>
 	);
 	}

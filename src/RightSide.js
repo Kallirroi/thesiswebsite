@@ -12,8 +12,8 @@ render() {
 				<li> Media Lab (<a href="https://whereis.mit.edu/?go=E14">link</a>)</li>
 				<li> Student Center (<a href="https://whereis.mit.edu/?go=W20">link</a>)</li>
 				<li> Muddy Charles Pub (<a href="https://whereis.mit.edu/?go=50">link</a>)</li>
-				<li> Dorm (<a href="">link</a>)</li>
-				<li> Dorm (<a href="">link</a>)</li>
+				{/*<li> Dorm (<a href="">link</a>)</li>
+				<li> Dorm (<a href="">link</a>)</li>*/}
 			</div>
 			<span className="number"> 2 </span>
 			<p className="text">At each location, you can choose to either use the decentralized network, or one of the "Twitter objects". These objects are entry point to Twitter. They record audio messages, transcribe them and share them on Twitter. </p>

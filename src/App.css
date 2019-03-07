@@ -132,8 +132,9 @@ a {
   box-shadow: none;
   font-weight: 400;
   overflow-x: hidden;
-  background: #000;
+  color: #000;
   box-sizing: border-box;
+  background: rgba(196, 208, 203);
 }
 
 .App-Fallback > header {
@@ -150,7 +151,6 @@ a {
   font-size: 2rem;
   line-height: 2.5rem;
   height: auto;
-  color: #fff;
   overflow-y: scroll;
   margin: 0 auto;
   padding-bottom: 5vh;
@@ -179,7 +179,7 @@ a {
   /* flex-direction: row; */
   font-size: 1.8rem;
   line-height: 2.3rem;
-  background: #fff;
+  background: rgba(196, 208, 203);
   margin: 0 auto;
 }
 
@@ -196,5 +196,4 @@ a {
 
 .App-Fallback > section.choices  > * > button.tweet {
   width: 60vw;
-  background: #fff;
 }

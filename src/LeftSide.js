@@ -18,7 +18,7 @@ render() {
 
 				</div>
 
-				<p>For more information, contact <span className="underline">kalli at mit.edu</span> </p>
+				<p className="italics">This is a Master's project by <a href="https://kalli-retzepi.com/">Kalli Retzepi</a>. </p>
 	  	</div>
 	);
 	}

@@ -11,7 +11,7 @@ render() {
 			<div className="places">
 				<li> Media Lab - third floor atrium (<a href="https://whereis.mit.edu/?go=E14">link</a>)</li>
 				<li> Student Center - second floor(<a href="https://whereis.mit.edu/?go=W20">link</a>)</li>
-				<li> Muddy Charles Pub - Memorial Dr. entrance (<a href="https://whereis.mit.edu/?go=50">link</a>)</li>
+				<li> Walker Memorial - Muddy Charles (<a href="https://whereis.mit.edu/?go=50">link</a>)</li>
 				<li> MIT List Visual Arts Center - Ames Street entrance (<a href="https://whereis.mit.edu/?go=E15">link</a>)</li>
 			</div>
 			<span className="number"> 2 </span>

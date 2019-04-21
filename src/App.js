@@ -62,7 +62,7 @@ class App extends Component {
             <p>How does the nature of a network shape the discourse its users have? How does what one says differ if they know that it will remain within a local network versus being shared on Twitter?</p>
             <p>The <a href="https://www.media.mit.edu/groups/viral-communications/overview/" target="_blank">Viral Communications</a> group at the Media Lab is interested in exploring these questions by deploying networks of physical objects in designated locations around the campus. These objects either form a small-scale, hyperlocal p2p network (case 1 below), or they are entry points to Twitter (case 2 below). </p> </div>
             <div className="column column-2">
-              <img alt="image" src="1.png" width="80%" />
+              <img alt="image" src="2.png" width="100%" />
             </div>
           </section>
 
